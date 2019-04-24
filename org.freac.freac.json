@@ -46,8 +46,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/libcdio/libcdio-2.0.0.tar.bz2",
-                    "sha256": "cd0da052a0e149e2526c41c5ac37b4865deb5c1cffe6faed18850154dbbd284b"
+                    "url": "https://ftp.gnu.org/gnu/libcdio/libcdio-2.1.0.tar.bz2",
+                    "sha256": "8550e9589dbd594bfac93b81ecf129b1dc9d0d51e90f9696f1b2f9b2af32712b"
                 }
             ]
         },
@@ -63,8 +63,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/libcdio/libcdio-paranoia-10.2+0.94+2.tar.gz",
-                    "sha256": "d60f82ece97eeb92407a9ee03f3499c8983206672c28ae5e4e22179063c81941"
+                    "url": "https://ftp.gnu.org/gnu/libcdio/libcdio-paranoia-10.2+2.0.0.tar.bz2",
+                    "sha256": "4565c18caf401083c53733e6d2847b6671ba824cff1c7792b9039693d34713c1"
                 }
             ]
         },
@@ -103,9 +103,13 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://monkeysaudio.com/files/MAC_SDK_444.zip",
-                    "sha256": "e2af2e9d57b7cd66e5d6525fcd8fcde3839f48a623d31aca22a92cb0d0ea297c",
+                    "url": "https://monkeysaudio.com/files/MAC_SDK_466.zip",
+                    "sha256": "a9957f74238e8422b420fed26141ae8f7aaa26576cc6eff1e35d1af85b93139b",
                     "strip-components": 0
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/mac-sdk-4.66-gcc.patch"
                 }
             ]
         },
@@ -191,8 +195,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.0/uriparser-0.9.0.tar.bz2",
-                    "sha256": "ec67eb34feda8eac166f281799f03ed48387694fca44f6f5852f61f8fb535e2c"
+                    "url": "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.2/uriparser-0.9.2.tar.bz2",
+                    "sha256": "759c1b6ad256bb5b14217480dee4f2d79dd605fb0dd0efa7d7404debe232ca14"
                 }
             ]
         },
@@ -309,12 +313,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://sourceforge.net/projects/smooth/files/smooth/0.8.74.0-pre5/smooth-0.8.74.0-pre5.tar.gz",
-                    "sha256": "1761c166b0a031ba43c67da46f4f8ddeb712fcd1c8f29531ac86dc3d4b0c6e10"
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/smooth-0.8.74.0-pre5-flatpak.patch"
+                    "url": "https://sourceforge.net/projects/smooth/files/smooth/0.8.74.0-pre6/smooth-0.8.74.0-pre6.tar.gz",
+                    "sha256": "b7f530d7d6855dd536235a9f15fb0a83682782da597d1e5b459c2b15676537b6"
                 }
             ]
         },
@@ -325,12 +325,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/enzo1982/BoCA/releases/download/v1.1-alpha-20181201/freac-cdk-1.1-alpha-20181201.tar.gz",
-                    "sha256": "3a6a32d001cda5cf32dc657516aa3dffb16264e5cebc982ba9987a4ffdb03d56"
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/freac-cdk-1.1-alpha-20181201-flatpak.patch"
+                    "url": "https://github.com/enzo1982/BoCA/releases/download/v1.1-alpha-20190423/freac-cdk-1.1-alpha-20190423.tar.gz",
+                    "sha256": "7bee8449bde5f147fedffdaf9682e21130591c8e1a9052d8a7c9925274e1b355"
                 }
             ]
         },
@@ -339,35 +335,17 @@
             "no-autogen": true,
             "make-install-args": [ "prefix=/app" ],
             "build-options": {
-                "cxxflags": "-DFREAC_DATE=\\\"20181201a\\\""
+                "cxxflags": "-DFREAC_DATE=\\\"20190423\\\""
             },
-            "post-install": [
-                "install -Dm644 -t /app/share/applications org.freac.freac.desktop",
-                "install -Dm644 -t /app/share/metainfo org.freac.freac.appdata.xml",
-                "install -Dm644 org.freac.freac-64x64.png /app/share/icons/hicolor/64x64/apps/org.freac.freac.png",
-                "install -Dm644 icons/freac.png /app/share/icons/hicolor/128x128/apps/org.freac.freac.png"
-            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/enzo1982/freac/releases/download/v1.1-alpha-20181201a/freac-1.1-alpha-20181201a.tar.gz",
-                    "sha256": "7f38c0e5716cd551d8636dddb343f700469217940fc0c1ef4ea43c20c19f2961"
+                    "url": "https://github.com/enzo1982/freac/releases/download/v1.1-alpha-20190423/freac-1.1-alpha-20190423.tar.gz",
+                    "sha256": "b6f228ec57b80e67a67c52a5040f85c334a89c8b700fb490008b0aa32c5afd0b"
                 },
                 {
                     "type": "patch",
-                    "path": "patches/freac-1.1-alpha-20181201a-flatpak.patch"
-                },
-                {
-                    "type": "file",
-                    "path": "org.freac.freac.desktop"
-                },
-                {
-                    "type": "file",
-                    "path": "org.freac.freac.appdata.xml"
-                },
-                {
-                    "type": "file",
-                    "path": "org.freac.freac-64x64.png"
+                    "path": "patches/freac-1.1-alpha-noudev.patch"
                 }
             ]
         }
