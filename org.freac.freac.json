@@ -291,7 +291,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://sourceforge.net/projects/smooth/files/smooth/0.9,0/smooth-0.9.0.tar.gz",
+                    "url": "https://sourceforge.net/projects/smooth/files/smooth/0.9.0/smooth-0.9.0.tar.gz",
                     "sha256": "62956b64ff09e0794e0c09b546bedfed2c4a94747f7e4b407c0e236e4b454a02"
                 }
             ]
