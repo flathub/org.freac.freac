@@ -63,8 +63,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/libcdio/libcdio-paranoia-10.2+2.0.0.tar.bz2",
-                    "sha256": "4565c18caf401083c53733e6d2847b6671ba824cff1c7792b9039693d34713c1"
+                    "url": "https://github.com/rocky/libcdio-paranoia/archive/release-10.2+2.0.1.tar.gz",
+                    "sha256": "7a4e257c85f3f84129cca55cd097c397364c7a6f79b9701bbc593b13bd59eb95"
                 }
             ]
         },
@@ -98,13 +98,13 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://monkeysaudio.com/files/MAC_SDK_491.zip",
-                    "sha256": "601656809a442d60fdbcb0274d06722bc7e9bc9d7ab139e8b645587e07f65bf1",
+                    "url": "https://monkeysaudio.com/files/MAC_SDK_508b.zip",
+                    "sha256": "29a3b8f34f4121b1c391ec4ed7f84dedba3066bb66a99a46edb5bebaa4795392",
                     "strip-components": 0
                 },
                 {
                     "type": "patch",
-                    "path": "patches/mac-sdk-4.91-gcc.patch"
+                    "path": "patches/mac-sdk-5.08b-gcc.patch"
                 }
             ]
         },
@@ -148,14 +148,14 @@
                 },
                 {
                     "type": "file",
-                    "url": "http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.guess;hb=058639b",
-                    "sha256": "7d2f990c6c5161405933fd0d7da080d1502f69aa16984761ce3c305dca9b504f",
+                    "url": "https://raw.githubusercontent.com/gcc-mirror/gcc/17bc331/config.guess",
+                    "sha256": "8202b7fde008212d6d36cccf219480f5d54cddb5452b241f47c51cb5c054193b",
                     "dest-filename": "autoaux/config.guess"
                 },
                 {
                     "type": "file",
-                    "url": "http://git.savannah.gnu.org/gitweb/?p=config.git;a=blob_plain;f=config.sub;hb=058639b",
-                    "sha256": "9afeeb8bf78f3ff549eb40f1364b54b4404ea1be27eee446af02790d9e39cc92",
+                    "url": "https://raw.githubusercontent.com/gcc-mirror/gcc/17bc331/config.sub",
+                    "sha256": "729711e8aa3228db4a3adea9ca5d60de184969a1537ac874477ce5676bee8464",
                     "dest-filename": "autoaux/config.sub"
                 }
             ]
@@ -257,7 +257,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/xiph/rnnoise.git",
-                    "commit": "91ef401f4c3536c6de999ac609262691ec888c4c"
+                    "commit": "9acc1e5a633e0961a5895a73204df24744f199b6"
                 }
             ]
         },
@@ -291,8 +291,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://sourceforge.net/projects/smooth/files/smooth/0.8.74.0-pre6/smooth-0.8.74.0-pre6.tar.gz",
-                    "sha256": "b7f530d7d6855dd536235a9f15fb0a83682782da597d1e5b459c2b15676537b6"
+                    "url": "https://sourceforge.net/projects/smooth/files/smooth/0.9,0/smooth-0.9.0.tar.gz",
+                    "sha256": "62956b64ff09e0794e0c09b546bedfed2c4a94747f7e4b407c0e236e4b454a02"
                 }
             ]
         },
@@ -303,8 +303,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/enzo1982/BoCA/releases/download/v1.1-alpha-20190423/freac-cdk-1.1-alpha-20190423.tar.gz",
-                    "sha256": "7bee8449bde5f147fedffdaf9682e21130591c8e1a9052d8a7c9925274e1b355"
+                    "url": "https://github.com/enzo1982/BoCA/releases/download/v1.1-beta1/freac-cdk-1.1-beta1.tar.gz",
+                    "sha256": "bf431a4715ef894c57b9c3bfd3ecef0426abbf592de9c004fe9625e6753502a4"
                 }
             ]
         },
@@ -313,17 +313,17 @@
             "no-autogen": true,
             "make-install-args": [ "prefix=/app" ],
             "build-options": {
-                "cxxflags": "-DFREAC_DATE=\\\"20190423\\\""
+                "cxxflags": "-DFREAC_DATE=\\\"20191215\\\""
             },
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/enzo1982/freac/releases/download/v1.1-alpha-20190423/freac-1.1-alpha-20190423.tar.gz",
-                    "sha256": "b6f228ec57b80e67a67c52a5040f85c334a89c8b700fb490008b0aa32c5afd0b"
+                    "url": "https://github.com/enzo1982/freac/releases/download/v1.1-beta1/freac-1.1-beta1.tar.gz",
+                    "sha256": "7b273f265d3d41f05a02b04663609dbf9557f44b6ac575a7239a27c943ade427"
                 },
                 {
                     "type": "patch",
-                    "path": "patches/freac-1.1-alpha-noudev.patch"
+                    "path": "patches/freac-1.1-beta-noudev.patch"
                 }
             ]
         }
