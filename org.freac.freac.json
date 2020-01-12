@@ -98,13 +98,13 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://monkeysaudio.com/files/MAC_SDK_508b.zip",
-                    "sha256": "29a3b8f34f4121b1c391ec4ed7f84dedba3066bb66a99a46edb5bebaa4795392",
+                    "url": "https://monkeysaudio.com/files/MAC_SDK_512.zip",
+                    "sha256": "43628f886b7bb0155a57c8afb4ed43d5fbdc1808b29d7cbe8cee64e038ec7834",
                     "strip-components": 0
                 },
                 {
                     "type": "patch",
-                    "path": "patches/mac-sdk-5.08b-gcc.patch"
+                    "path": "patches/mac-sdk-5.12-gcc.patch"
                 }
             ]
         },
@@ -291,8 +291,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://sourceforge.net/projects/smooth/files/smooth/0.9.0/smooth-0.9.0.tar.gz",
-                    "sha256": "62956b64ff09e0794e0c09b546bedfed2c4a94747f7e4b407c0e236e4b454a02"
+                    "url": "https://sourceforge.net/projects/smooth/files/smooth/0.9.1/smooth-0.9.1.tar.gz",
+                    "sha256": "a1f1fbc4bdcd3126933f979fc980184375da673c82f53c5db60baa501cfd7f49"
                 }
             ]
         },
@@ -303,8 +303,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/enzo1982/BoCA/releases/download/v1.1-beta1/freac-cdk-1.1-beta1.tar.gz",
-                    "sha256": "bf431a4715ef894c57b9c3bfd3ecef0426abbf592de9c004fe9625e6753502a4"
+                    "url": "https://github.com/enzo1982/BoCA/releases/download/v1.1-beta2/freac-cdk-1.1-beta2.tar.gz",
+                    "sha256": "4146af58c7a8c609208c764dd2616cf83aa9ac9ac9e5f76030f17150e778f67a"
                 }
             ]
         },
@@ -313,13 +313,13 @@
             "no-autogen": true,
             "make-install-args": [ "prefix=/app" ],
             "build-options": {
-                "cxxflags": "-DFREAC_DATE=\\\"20191215\\\""
+                "cxxflags": "-DFREAC_DATE=\\\"20200112\\\""
             },
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/enzo1982/freac/releases/download/v1.1-beta1/freac-1.1-beta1.tar.gz",
-                    "sha256": "7b273f265d3d41f05a02b04663609dbf9557f44b6ac575a7239a27c943ade427"
+                    "url": "https://github.com/enzo1982/freac/releases/download/v1.1-beta2/freac-1.1-beta2.tar.gz",
+                    "sha256": "bf7908173f106ec4ec1877273f229340b6c96ecf21644c6b7e36154d3194011c"
                 },
                 {
                     "type": "patch",
