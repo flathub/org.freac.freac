@@ -291,8 +291,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://sourceforge.net/projects/smooth/files/smooth/0.9.2/smooth-0.9.2.tar.gz",
-                    "sha256": "1222a70155b7298375f90daf11b243b404f7afb7f281123ddb272d83d9d20d67"
+                    "url": "https://github.com/enzo1982/smooth/releases/download/v0.9.3/smooth-0.9.3.tar.gz",
+                    "sha256": "784559ef2056f65015d6be3db46df6d8b57faf82bb1cea389f1c406062d50749"
                 }
             ]
         },
@@ -303,8 +303,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/enzo1982/BoCA/releases/download/v1.0-beta3/boca-1.0-beta3.tar.gz",
-                    "sha256": "a99902f10636df23cc55dac332acecc5f97f5da8340c553661babd1715503c4e"
+                    "url": "https://github.com/enzo1982/BoCA/releases/download/v1.0-rc1/boca-1.0-rc1.tar.gz",
+                    "sha256": "7b58f9d3c22f48a9b8cfd044b67f965f9a47022b47591ebc051eee393ff60836"
                 }
             ]
         },
@@ -313,13 +313,13 @@
             "no-autogen": true,
             "make-install-args": [ "prefix=/app" ],
             "build-options": {
-                "cxxflags": "-DFREAC_DATE=\\\"20200209\\\""
+                "cxxflags": "-DFREAC_DATE=\\\"20200308\\\""
             },
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/enzo1982/freac/releases/download/v1.1-beta3/freac-1.1-beta3.tar.gz",
-                    "sha256": "8f3ba795ba51fb69a7a9dde081cb949fe0974fd89987c3631baa7fb6382652eb"
+                    "url": "https://github.com/enzo1982/freac/releases/download/v1.1-rc1/freac-1.1-rc1.tar.gz",
+                    "sha256": "901c476fa820f5e640b2b8bc0a47c9df8721d775526e3aad06bca5bbce080ff9"
                 },
                 {
                     "type": "patch",
