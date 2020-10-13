@@ -292,7 +292,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/enzo1982/smooth.git"
+                    "url": "https://github.com/enzo1982/smooth.git",
                     "commit": "0db8f929b935650698d3bcb09a52cc30e4abbb2e"
                 }
             ]
