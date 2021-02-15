@@ -71,6 +71,24 @@
             ]
         },
         {
+            "name": "libflac",
+            "config-opts": [
+                "--disable-cpp-libs"
+            ],
+            "cleanup": [
+                "/bin/flac",
+                "/bin/metaflac",
+                "/share/doc/flac*"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://ftp.osuosl.org/pub/xiph/releases/flac/flac-1.3.3.tar.xz",
+                    "sha256": "213e82bd716c9de6db2f98bcadbc4c24c7e2efe8c75939a1a84e28539c4e1748"
+                }
+            ]
+        },
+        {
             "name": "libmp3lame",
             "config-opts": [
                  "--enable-nasm",
@@ -119,6 +137,19 @@
                     "url": "https://raw.githubusercontent.com/gcc-mirror/gcc/17bc331/config.sub",
                     "sha256": "729711e8aa3228db4a3adea9ca5d60de184969a1537ac874477ce5676bee8464",
                     "dest-filename": "autoaux/config.sub"
+                }
+            ]
+        },
+        {
+            "name": "libogg",
+            "cleanup": [
+                "/share/doc/libogg"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://ftp.osuosl.org/pub/xiph/releases/ogg/libogg-1.3.4.tar.xz",
+                    "sha256": "c163bc12bc300c401b6aa35907ac682671ea376f13ae0969a220f7ddf71893fe"
                 }
             ]
         },
