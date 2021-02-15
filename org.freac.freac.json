@@ -1,7 +1,7 @@
 {
     "app-id": "org.freac.freac",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "20.08",
+    "runtime-version": "18.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "freac",
     "finish-args": [
@@ -260,9 +260,9 @@
             "make-install-args": [ "prefix=/app" ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/enzo1982/smooth.git",
-                    "commit": "0db8f929b935650698d3bcb09a52cc30e4abbb2e"
+                    "type": "archive",
+                    "url": "https://github.com/enzo1982/smooth/releases/download/v0.9.7/smooth-0.9.7.tar.gz",
+                    "sha256": "bc00a5e5650895eef629d9e4aa0c32e7438552798f1d40624498a9a116d2411d"
                 }
             ]
         },
@@ -273,8 +273,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/enzo1982/BoCA/releases/download/v1.0.3/boca-1.0.3.tar.gz",
-                    "sha256": "314467893f3472a8354b60566877b064a0f37279990c70d93005bca265b2c926"
+                    "url": "https://github.com/enzo1982/BoCA/releases/download/v1.0.4/boca-1.0.4.tar.gz",
+                    "sha256": "af01549c006ca5beeb3175178136a1598a25a1c856317ddc0c07355b0e713b6b"
                 }
             ]
         },
@@ -283,13 +283,13 @@
             "no-autogen": true,
             "make-install-args": [ "prefix=/app" ],
             "build-options": {
-                "cxxflags": "-DFREAC_DATE=\\\"20201011\\\""
+                "cxxflags": "-DFREAC_DATE=\\\"20210214\\\""
             },
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/enzo1982/freac/releases/download/v1.1.3/freac-1.1.3.tar.gz",
-                    "sha256": "eb8e362457614b0e256c9c641ed1f0408b6a56e0eb6af11b5993f2ef30403332"
+                    "url": "https://github.com/enzo1982/freac/releases/download/v1.1.4/freac-1.1.4.tar.gz",
+                    "sha256": "7c06ef01e8342dc13fe198fdcc15fc49ba06a76df471949a20a88f7d8cd8e911"
                 },
                 {
                     "type": "patch",
