@@ -287,9 +287,9 @@
             },
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/enzo1982/freac/releases/download/v1.1.5/freac-1.1.5.tar.gz",
-                    "sha256": "62c61840a935dba5230fb7295b508370cd4f1e861db9d479f21c858a8aac3470"
+                    "type": "git",
+                    "url": "https://github.com/enzo1982/freac.git",
+                    "commit": "edea60f38442bc8d2c2dd0a86dc438b228cfbb36"
                 },
                 {
                     "type": "patch",
