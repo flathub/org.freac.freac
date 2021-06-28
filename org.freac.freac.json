@@ -107,6 +107,10 @@
                 {
                     "type": "patch",
                     "path": "patches/mp4v2-2.0.0-fixes.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/mp4v2-2.0.0-config.patch"
                 }
             ]
         },
