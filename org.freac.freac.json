@@ -95,11 +95,6 @@
         },
         {
             "name": "libmp4v2",
-            "buildsystem": "simple",
-            "build-commands": [
-                "./configure --prefix=/app",
-                "make -j $FLATPAK_BUILDER_N_JOBS && sudo make install"
-            ],
             "cleanup": [
                 "/bin/mp4*"
             ],
@@ -112,16 +107,6 @@
                 {
                     "type": "patch",
                     "path": "patches/mp4v2-2.0.0-fixes.patch"
-                },
-                {
-                    "type": "file",
-                    "path": "files/config.guess",
-                    "dest-filename": "autoaux/config.guess"
-                },
-                {
-                    "type": "file",
-                    "path": "files/config.sub",
-                    "dest-filename": "autoaux/config.sub"
                 }
             ]
         },
