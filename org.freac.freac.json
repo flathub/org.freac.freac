@@ -95,6 +95,11 @@
         },
         {
             "name": "libmp4v2",
+            "buildsystem": "simple",
+            "build-commands": [
+                "./configure --prefix=/app",
+                "make -j $FLATPAK_BUILDER_N_JOBS && sudo make install"
+            ],
             "cleanup": [
                 "/bin/mp4*"
             ],
