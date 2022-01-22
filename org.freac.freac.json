@@ -1,7 +1,7 @@
 {
     "app-id": "org.freac.freac",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "20.08",
+    "runtime-version": "21.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "freac",
     "finish-args": [
@@ -101,6 +101,7 @@
             "sources": [
                 {
                     "type": "archive",
+                    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/mp4v2/mp4v2-2.0.0.tar.bz2",
                     "url": "https://freac.org/patches/mp4v2-2.0.0.tar.bz2",
                     "sha256": "0319b9a60b667cf10ee0ec7505eb7bdc0a2e21ca7a93db96ec5bd758e3428338"
                 },
@@ -127,8 +128,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.5/uriparser-0.9.5.tar.bz2",
-                    "sha256": "dd8061eba7f2e66c151722e6db0b27c972baa6215cf16f135dbe0f0a4bc6606c"
+                    "url": "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.6/uriparser-0.9.6.tar.bz2",
+                    "sha256": "9ce4c3f151e78579f23937b44abecb428126863ad02e594e115e882353de905b"
                 }
             ]
         },
@@ -170,8 +171,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ffmpeg.org/releases/ffmpeg-4.4.tar.xz",
-                    "sha256": "06b10a183ce5371f915c6bb15b7b1fffbe046e8275099c96affc29e17645d909"
+                    "url": "https://ffmpeg.org/releases/ffmpeg-5.0.tar.xz",
+                    "sha256": "51e919f7d205062c0fd4fae6243a84850391115104ccf1efc451733bc0ac7298"
                 }
             ]
         },
@@ -253,8 +254,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/enzo1982/smooth/releases/download/v0.9.8/smooth-0.9.8.tar.gz",
-                    "sha256": "a02c3c15fc9f221809bd16ebbe56460f04facb36ed80ba1d0975526896d9fb42"
+                    "url": "https://github.com/enzo1982/smooth/releases/download/v0.9.9/smooth-0.9.9.tar.gz",
+                    "sha256": "ccbf04256727d2f71a6b8ccfb2bbe3032cc3fd0f8b2461d4ead7d64e40a209ca"
                 }
             ]
         },
@@ -265,8 +266,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/enzo1982/BoCA/releases/download/v1.0.5/boca-1.0.5.tar.gz",
-                    "sha256": "9befa4555b5d9a0ecf3b8472f1d8f14c26dee50993d1d66f35a2d0f140a72870"
+                    "url": "https://github.com/enzo1982/BoCA/releases/download/v1.0.6a/boca-1.0.6a.tar.gz",
+                    "sha256": "acb9f47b8b4a76a3b24dbc3bbd40737744ba4aafc1ab668a1e5e6a09f58c4f46"
                 }
             ]
         },
@@ -275,13 +276,13 @@
             "no-autogen": true,
             "make-install-args": [ "prefix=/app" ],
             "build-options": {
-                "cxxflags": "-DFREAC_DATE=\\\"20210627\\\""
+                "cxxflags": "-DFREAC_DATE=\\\"20220122\\\""
             },
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/enzo1982/freac.git",
-                    "commit": "edea60f38442bc8d2c2dd0a86dc438b228cfbb36"
+                    "commit": "24657b634cefaf6dd65ec5a03dae6da7936a889e"
                 },
                 {
                     "type": "patch",
