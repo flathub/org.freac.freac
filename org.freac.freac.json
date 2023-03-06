@@ -1,7 +1,7 @@
 {
     "app-id": "org.freac.freac",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "21.08",
+    "runtime-version": "22.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "freac",
     "finish-args": [
@@ -101,17 +101,12 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/mp4v2/mp4v2-2.0.0.tar.bz2",
-                    "url": "https://freac.org/patches/mp4v2-2.0.0.tar.bz2",
-                    "sha256": "0319b9a60b667cf10ee0ec7505eb7bdc0a2e21ca7a93db96ec5bd758e3428338"
+                    "url": "https://github.com/enzo1982/mp4v2/releases/download/v2.1.2/mp4v2-2.1.2.tar.bz2",
+                    "sha256": "0b943133673cffd4625247783e34080797de7386142061a6613e0c26285953ef"
                 },
                 {
                     "type": "patch",
-                    "path": "patches/mp4v2-2.0.0-fixes.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/mp4v2-2.0.0-config.patch"
+                    "path": "patches/mp4v2-2.1.2-sfocache.patch"
                 }
             ]
         },
@@ -128,8 +123,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.6/uriparser-0.9.6.tar.bz2",
-                    "sha256": "9ce4c3f151e78579f23937b44abecb428126863ad02e594e115e882353de905b"
+                    "url": "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.7/uriparser-0.9.7.tar.xz",
+                    "sha256": "1ddae35cb3cc2c36e8199829d46f1c7f8b222e74a723fdae67ec8561e1ac5a39"
                 }
             ]
         },
@@ -171,8 +166,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ffmpeg.org/releases/ffmpeg-5.0.tar.xz",
-                    "sha256": "51e919f7d205062c0fd4fae6243a84850391115104ccf1efc451733bc0ac7298"
+                    "url": "https://ffmpeg.org/releases/ffmpeg-6.0.tar.xz",
+                    "sha256": "57be87c22d9b49c112b6d24bc67d42508660e6b718b3db89c44e47e289137082"
                 }
             ]
         },
@@ -254,8 +249,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/enzo1982/smooth/releases/download/v0.9.9/smooth-0.9.9.tar.gz",
-                    "sha256": "ccbf04256727d2f71a6b8ccfb2bbe3032cc3fd0f8b2461d4ead7d64e40a209ca"
+                    "url": "https://github.com/enzo1982/smooth/releases/download/v0.9.10/smooth-0.9.10.tar.gz",
+                    "sha256": "c018ea09eb4e269268cb123bb5d24a813d07c985384c5384d7fa73b7173e9f1c"
                 }
             ]
         },
@@ -266,8 +261,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/enzo1982/BoCA/releases/download/v1.0.6a/boca-1.0.6a.tar.gz",
-                    "sha256": "acb9f47b8b4a76a3b24dbc3bbd40737744ba4aafc1ab668a1e5e6a09f58c4f46"
+                    "url": "https://github.com/enzo1982/BoCA/releases/download/v1.0.7/boca-1.0.7.tar.gz",
+                    "sha256": "2433f2752e1441f6270460f5f2acb99de67b269e494559134e3ab26173222c7e"
                 }
             ]
         },
@@ -276,13 +271,13 @@
             "no-autogen": true,
             "make-install-args": [ "prefix=/app" ],
             "build-options": {
-                "cxxflags": "-DFREAC_DATE=\\\"20220122\\\""
+                "cxxflags": "-DFREAC_DATE=\\\"20230305\\\""
             },
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/enzo1982/freac.git",
-                    "commit": "24657b634cefaf6dd65ec5a03dae6da7936a889e"
+                    "type": "archive",
+                    "url": "https://github.com/enzo1982/freac/releases/download/v1.1.7/freac-1.1.7.tar.gz",
+                    "sha256": "617d51759315f65e387fcaf1f1b455c97a2fb53bfdbd2521c9c586b3271f3528"
                 },
                 {
                     "type": "patch",
