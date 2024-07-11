@@ -1,0 +1,12 @@
+--- ./metadata/org.freac.freac.appdata-orig.xml	2023-03-05 22:37:38.000000000 +0530
++++ ./metadata/org.freac.freac.appdata.xml	2024-07-11 10:04:45.460506077 +0530
+@@ -4,6 +4,9 @@
+     <id>org.freac.freac</id>
+     <launchable type="desktop-id">org.freac.freac.desktop</launchable>
+     <name>fre:ac</name>
++    <developer id="org.freac">
++      <name>enzo1982</name>
++    </developer>
+     <summary>Audio converter and CD ripper</summary>
+     <metadata_license>FSFAP</metadata_license>
+     <project_license>GPL-2.0</project_license>
