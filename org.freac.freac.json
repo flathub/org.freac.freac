@@ -142,9 +142,9 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/xiph/rnnoise/archive/refs/tags/v0.2.tar.gz",
-                    "sha256": "e4a17eb1493b7551f9f7781d2acc67b8847d6ed7c4b64db0fd62c017021ae1ec"
+                    "type": "git",
+                    "url": "https://github.com/xiph/rnnoise.git",
+                    "commit": "372f7b4b76cde4ca1ec4605353dd17898a99de38"
                 },
                 {
                     "type": "file",
