@@ -62,31 +62,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/rocky/libcdio-paranoia/archive/release-10.2+2.0.1.tar.gz",
-                    "sha256": "7a4e257c85f3f84129cca55cd097c397364c7a6f79b9701bbc593b13bd59eb95"
-                }
-            ]
-        },
-        {
-            "name": "libmp3lame",
-            "config-opts": [
-                 "--enable-nasm",
-                 "--disable-frontend"
-            ],
-            "cleanup": [
-                "/share/doc/lame"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://sourceforge.net/projects/lame/files/lame/3.100/lame-3.100.tar.gz",
-                    "sha256": "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e"
-                },
-                {
-                    "only-arches": [ "x86_64" ],
-                    "type": "patch",
-                    "path": "patches/lame-3.100-sse-20171014.patch",
-                    "strip-components": 0
+                    "url": "https://github.com/libcdio/libcdio-paranoia/archive/refs/tags/release-10.2+2.0.2.tar.gz",
+                    "sha256": "fe35208811f3edfcb79ae7b4ad1984f3188aea42c4c8ba4d009efafb36734a8b"
                 }
             ]
         },
@@ -118,28 +95,6 @@
                     "type": "archive",
                     "url": "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.8/uriparser-0.9.8.tar.xz",
                     "sha256": "1d71c054837ea32a31e462bce5a1af272379ecf511e33448e88100b87ff73b2e"
-                }
-            ]
-        },
-        {
-            "name": "libvorbis",
-            "cleanup": [
-                "/share/doc/libvorbis*"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://ftp.osuosl.org/pub/xiph/releases/vorbis/libvorbis-1.3.7.tar.xz",
-                    "sha256": "b33cc4934322bcbf6efcbacf49e3ca01aadbea4114ec9589d1b1e9d20f72954b"
-                },
-                {
-                    "type": "patch",
-                    "path": "patches/libvorbis-1.3.7-aotuv-b6.03.patch"
-                },
-                {
-                    "only-arches": [ "x86_64" ],
-                    "type": "patch",
-                    "path": "patches/libvorbis-1.3.7-aotuv-b6.03-lancer.patch"
                 }
             ]
         },
@@ -187,33 +142,25 @@
             ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/xiph/rnnoise.git",
-                    "commit": "9acc1e5a633e0961a5895a73204df24744f199b6"
+                    "type": "archive",
+                    "url": "https://github.com/xiph/rnnoise/archive/refs/tags/v0.2.tar.gz",
+                    "sha256": "e4a17eb1493b7551f9f7781d2acc67b8847d6ed7c4b64db0fd62c017021ae1ec"
+                },
+                {
+                    "type": "file",
+                    "url": "https://media.xiph.org/rnnoise/models/rnnoise_data-0b50c45.tar.gz",
+                    "sha256": "4ac81c5c0884ec4bd5907026aaae16209b7b76cd9d7f71af582094a2f98f4b43"
                 }
             ]
         },
         {
             "name": "rubberband",
-            "build-options": {
-                "env": { "Vamp_CFLAGS": " ", "Vamp_LIBS": " " }
-            },
+            "buildsystem": "meson",
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://breakfastquay.com/files/releases/rubberband-1.8.2.tar.bz2",
-                    "sha256": "86bed06b7115b64441d32ae53634fcc0539a50b9b648ef87443f936782f6c3ca"
-                },
-                {
-                    "type": "shell",
-                    "commands": [
-                        "sed -i -e \"s/^all\\:.*/all: bin lib \\$\\(DYNAMIC_TARGET\\)/\" Makefile.in",
-                        "head -n 169 Makefile.in >> Makefile.in.temp",
-                        "head -n 172 Makefile.in | tail -n 1 >> Makefile.in.temp",
-                        "head -n 185 Makefile.in | tail -n 6 >> Makefile.in.temp",
-                        "tail -n 100 Makefile.in >> Makefile.in.temp",
-                        "mv Makefile.in.temp Makefile.in"
-                    ]
+                    "url": "https://breakfastquay.com/files/releases/rubberband-4.0.0.tar.bz2",
+                    "sha256": "af050313ee63bc18b35b2e064e5dce05b276aaf6d1aa2b8a82ced1fe2f8028e9"
                 }
             ]
         },
