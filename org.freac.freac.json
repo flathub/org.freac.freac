@@ -46,7 +46,12 @@
                 {
                     "type": "archive",
                     "url": "https://ftp.gnu.org/gnu/libcdio/libcdio-2.1.0.tar.bz2",
-                    "sha256": "8550e9589dbd594bfac93b81ecf129b1dc9d0d51e90f9696f1b2f9b2af32712b"
+                    "sha256": "8550e9589dbd594bfac93b81ecf129b1dc9d0d51e90f9696f1b2f9b2af32712b",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 1573,
+                        "url-template": "https://ftp.gnu.org/gnu/libcdio/libcdio-$version.tar.bz2"
+                    }
                 }
             ]
         },
@@ -63,7 +68,12 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/libcdio/libcdio-paranoia/archive/refs/tags/release-10.2+2.0.2.tar.gz",
-                    "sha256": "fe35208811f3edfcb79ae7b4ad1984f3188aea42c4c8ba4d009efafb36734a8b"
+                    "sha256": "fe35208811f3edfcb79ae7b4ad1984f3188aea42c4c8ba4d009efafb36734a8b",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 21751,
+                        "url-template": "https://github.com/libcdio/libcdio-paranoia/archive/refs/tags/release-10.2+$version.tar.gz"
+                    }
                 }
             ]
         },
@@ -76,7 +86,12 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/enzo1982/mp4v2/releases/download/v2.1.3/mp4v2-2.1.3.tar.bz2",
-                    "sha256": "033185c17bf3c5fdd94020c95f8325be2e5356558e3913c3d6547a85dd61f7f1"
+                    "sha256": "033185c17bf3c5fdd94020c95f8325be2e5356558e3913c3d6547a85dd61f7f1",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 98413,
+                        "url-template": "https://github.com/enzo1982/mp4v2/releases/download/v$version/mp4v2-$version.tar.bz2"
+                    }
                 }
             ]
         },
@@ -94,7 +109,12 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.8/uriparser-0.9.8.tar.xz",
-                    "sha256": "1d71c054837ea32a31e462bce5a1af272379ecf511e33448e88100b87ff73b2e"
+                    "sha256": "1d71c054837ea32a31e462bce5a1af272379ecf511e33448e88100b87ff73b2e",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 10160,
+                        "url-template": "https://github.com/uriparser/uriparser/releases/download/uriparser-$version/uriparser-$version.tar.xz"
+                    }
                 }
             ]
         },
@@ -115,7 +135,12 @@
                 {
                     "type": "archive",
                     "url": "https://files.musepack.net/source/musepack_src_r475.tar.gz",
-                    "sha256": "a4b1742f997f83e1056142d556a8c20845ba764b70365ff9ccf2e3f81c427b2b"
+                    "sha256": "a4b1742f997f83e1056142d556a8c20845ba764b70365ff9ccf2e3f81c427b2b",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 21865,
+                        "url-template": "https://files.musepack.net/source/musepack_src_r$version.tar.gz"
+                    }
                 },
                 {
                     "type": "patch",
@@ -145,7 +170,11 @@
                     "type": "git",
                     "url": "https://gitlab.xiph.org/xiph/rnnoise.git",
                     "tag": "v0.2",
-                    "commit": "904a876dce1f9ab8860c0a5000ed151f9f6eef58"
+                    "commit": "904a876dce1f9ab8860c0a5000ed151f9f6eef58",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    }
                 },
                 {
                     "type": "patch",
@@ -155,7 +184,8 @@
                 {
                     "type": "file",
                     "url": "https://media.xiph.org/rnnoise/models/rnnoise_data-0b50c45.tar.gz",
-                    "sha256": "4ac81c5c0884ec4bd5907026aaae16209b7b76cd9d7f71af582094a2f98f4b43"
+                    "sha256": "4ac81c5c0884ec4bd5907026aaae16209b7b76cd9d7f71af582094a2f98f4b43",
+                    "//": "Add manually according to download_model.sh"
                 }
             ]
         },
@@ -166,7 +196,12 @@
                 {
                     "type": "archive",
                     "url": "https://breakfastquay.com/files/releases/rubberband-4.0.0.tar.bz2",
-                    "sha256": "af050313ee63bc18b35b2e064e5dce05b276aaf6d1aa2b8a82ced1fe2f8028e9"
+                    "sha256": "af050313ee63bc18b35b2e064e5dce05b276aaf6d1aa2b8a82ced1fe2f8028e9",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 4222,
+                        "url-template": "https://breakfastquay.com/files/releases/rubberband-$version.tar.bz2"
+                    }
                 }
             ]
         },
@@ -178,7 +213,12 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/enzo1982/smooth/releases/download/v0.9.10/smooth-0.9.10.tar.gz",
-                    "sha256": "c018ea09eb4e269268cb123bb5d24a813d07c985384c5384d7fa73b7173e9f1c"
+                    "sha256": "c018ea09eb4e269268cb123bb5d24a813d07c985384c5384d7fa73b7173e9f1c",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 84187,
+                        "url-template": "https://github.com/enzo1982/smooth/releases/download/v$version/smooth-$version.tar.gz"
+                    }
                 }
             ]
         },
@@ -190,7 +230,12 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/enzo1982/BoCA/releases/download/v1.0.7/boca-1.0.7.tar.gz",
-                    "sha256": "2433f2752e1441f6270460f5f2acb99de67b269e494559134e3ab26173222c7e"
+                    "sha256": "2433f2752e1441f6270460f5f2acb99de67b269e494559134e3ab26173222c7e",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 371335,
+                        "url-template": "https://github.com/enzo1982/BoCA/releases/download/v$version/boca-$version.tar.gz"
+                    }
                 }
             ]
         },
@@ -205,7 +250,12 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/enzo1982/freac/releases/download/v1.1.7/freac-1.1.7.tar.gz",
-                    "sha256": "617d51759315f65e387fcaf1f1b455c97a2fb53bfdbd2521c9c586b3271f3528"
+                    "sha256": "617d51759315f65e387fcaf1f1b455c97a2fb53bfdbd2521c9c586b3271f3528",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 371355,
+                        "url-template": "https://github.com/enzo1982/freac/releases/download/v$version/freac-$version.tar.gz"
+                    }
                 },
                 {
                     "type": "patch",
