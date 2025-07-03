@@ -56,28 +56,6 @@
             ]
         },
         {
-            "name": "libcdio-paranoia",
-            "config-opts": [
-                "--disable-cxx",
-                "--disable-example-progs"
-            ],
-            "cleanup": [
-                "/bin/cd-paranoia"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/libcdio/libcdio-paranoia/archive/refs/tags/release-10.2+2.0.2.tar.gz",
-                    "sha256": "fe35208811f3edfcb79ae7b4ad1984f3188aea42c4c8ba4d009efafb36734a8b",
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 21751,
-                        "url-template": "https://github.com/libcdio/libcdio-paranoia/archive/refs/tags/release-10.2+$version.tar.gz"
-                    }
-                }
-            ]
-        },
-        {
             "name": "libmp3lame",
             "//": "Performance-enhancing patch, not part of runtime libmp3lame",
             "config-opts": [
