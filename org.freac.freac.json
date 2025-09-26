@@ -78,6 +78,21 @@
             ]
         },
         {
+            "name": "libfdk-aac",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/mstorsjo/fdk-aac/archive/v2.0.3.tar.gz",
+                    "sha256": "e25671cd96b10bad896aa42ab91a695a9e573395262baed4e4a2ff178d6a3a78",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 16208,
+                        "url-template": "https://github.com/mstorsjo/fdk-aac/archive/v$version.tar.gz"
+                    }
+                }
+            ]
+        },
+        {
             "name": "libmp3lame",
             "//": "Performance-enhancing patch, not part of runtime libmp3lame",
             "config-opts": [
@@ -312,6 +327,10 @@
                         "project-id": 371335,
                         "url-template": "https://github.com/enzo1982/BoCA/releases/download/v$version/boca-$version.tar.gz"
                     }
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/boca-1.0.7-mac.patch"
                 }
             ]
         },

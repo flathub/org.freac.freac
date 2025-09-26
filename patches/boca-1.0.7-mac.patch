@@ -1,0 +1,24 @@
+diff -Naur boca-1.0.7/components/decoder/mac/dllinterface.cpp boca-1.0.7-mac/components/decoder/mac/dllinterface.cpp
+--- boca-1.0.7/components/decoder/mac/dllinterface.cpp	2023-02-19 18:56:26.000000000 +0100
++++ boca-1.0.7-mac/components/decoder/mac/dllinterface.cpp	2025-09-26 16:05:41.520031400 +0200
+@@ -56,7 +56,7 @@
+ 	 */
+ 	unsigned int	 interfaceVersion = ex_GetLibraryInterfaceVersion();
+ 
+-	if (interfaceVersion != 9) { FreeMACDLL(); return False; }
++	if (interfaceVersion > 14) { FreeMACDLL(); return False; }
+ 
+ 	return True;
+ }
+diff -Naur boca-1.0.7/components/encoder/mac/dllinterface.cpp boca-1.0.7-mac/components/encoder/mac/dllinterface.cpp
+--- boca-1.0.7/components/encoder/mac/dllinterface.cpp	2023-02-19 18:56:26.000000000 +0100
++++ boca-1.0.7-mac/components/encoder/mac/dllinterface.cpp	2025-09-26 16:06:00.316074500 +0200
+@@ -56,7 +56,7 @@
+ 	 */
+ 	unsigned int	 interfaceVersion = ex_GetLibraryInterfaceVersion();
+ 
+-	if (interfaceVersion != 9) { FreeMACDLL(); return False; }
++	if (interfaceVersion > 14) { FreeMACDLL(); return False; }
+ 
+ 	return True;
+ }
