@@ -360,6 +360,10 @@
                 },
                 {
                     "type": "patch",
+                    "path": "patches/freac-1.1.7-playback-fix.patch"
+                },
+                {
+                    "type": "patch",
                     "path": "patches/appstream.patch"
                 }
             ]
