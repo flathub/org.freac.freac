@@ -1,7 +1,7 @@
 {
     "app-id": "org.freac.freac",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "24.08",
+    "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "freac",
     "finish-args": [
@@ -45,8 +45,13 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.gnu.org/gnu/libcdio/libcdio-2.1.0.tar.bz2",
-                    "sha256": "8550e9589dbd594bfac93b81ecf129b1dc9d0d51e90f9696f1b2f9b2af32712b"
+                    "url": "https://github.com/libcdio/libcdio/archive/refs/tags/2.2.0.tar.gz",
+                    "sha256": "df007a9b9667797e027e573822cc865e5e106352f8a6fbca67ee8e9e7a1e5b51",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 1573,
+                        "url-template": "https://github.com/libcdio/libcdio/archive/refs/tags/$version.tar.gz"
+                    }
                 }
             ]
         },
@@ -62,16 +67,37 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/rocky/libcdio-paranoia/archive/release-10.2+2.0.1.tar.gz",
-                    "sha256": "7a4e257c85f3f84129cca55cd097c397364c7a6f79b9701bbc593b13bd59eb95"
+                    "url": "https://github.com/libcdio/libcdio-paranoia/archive/refs/tags/release-10.2+2.0.2.tar.gz",
+                    "sha256": "fe35208811f3edfcb79ae7b4ad1984f3188aea42c4c8ba4d009efafb36734a8b",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 21751,
+                        "url-template": "https://github.com/libcdio/libcdio-paranoia/archive/refs/tags/release-10.2+$version.tar.gz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "libfdk-aac",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/mstorsjo/fdk-aac/archive/v2.0.3.tar.gz",
+                    "sha256": "e25671cd96b10bad896aa42ab91a695a9e573395262baed4e4a2ff178d6a3a78",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 16208,
+                        "url-template": "https://github.com/mstorsjo/fdk-aac/archive/v$version.tar.gz"
+                    }
                 }
             ]
         },
         {
             "name": "libmp3lame",
+            "//": "Performance-enhancing patch, not part of runtime libmp3lame",
             "config-opts": [
-                 "--enable-nasm",
-                 "--disable-frontend"
+                "--enable-nasm",
+                "--disable-frontend"
             ],
             "cleanup": [
                 "/share/doc/lame"
@@ -80,10 +106,17 @@
                 {
                     "type": "archive",
                     "url": "https://sourceforge.net/projects/lame/files/lame/3.100/lame-3.100.tar.gz",
-                    "sha256": "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e"
+                    "sha256": "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 12523,
+                        "url-template": "https://sourceforge.net/projects/lame/files/lame/$version/lame-$version.tar.gz"
+                    }
                 },
                 {
-                    "only-arches": [ "x86_64" ],
+                    "only-arches": [
+                        "x86_64"
+                    ],
                     "type": "patch",
                     "path": "patches/lame-3.100-sse-20171014.patch",
                     "strip-components": 0
@@ -99,13 +132,18 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/enzo1982/mp4v2/releases/download/v2.1.3/mp4v2-2.1.3.tar.bz2",
-                    "sha256": "033185c17bf3c5fdd94020c95f8325be2e5356558e3913c3d6547a85dd61f7f1"
+                    "sha256": "033185c17bf3c5fdd94020c95f8325be2e5356558e3913c3d6547a85dd61f7f1",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 98413,
+                        "url-template": "https://github.com/enzo1982/mp4v2/releases/download/v$version/mp4v2-$version.tar.bz2"
+                    }
                 }
             ]
         },
         {
             "name": "liburiparser",
-            "buildsystem": "cmake",
+            "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DURIPARSER_BUILD_DOCS=OFF",
                 "-DURIPARSER_BUILD_TESTS=OFF"
@@ -116,28 +154,41 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.8/uriparser-0.9.8.tar.xz",
-                    "sha256": "1d71c054837ea32a31e462bce5a1af272379ecf511e33448e88100b87ff73b2e"
+                    "url": "https://github.com/uriparser/uriparser/releases/download/uriparser-0.9.9/uriparser-0.9.9.tar.xz",
+                    "sha256": "85645df1bb220a3867c42f8adeba4f6a4b2fdc1563e91ad7d9f92d14d3dd377d",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 10160,
+                        "url-template": "https://github.com/uriparser/uriparser/releases/download/uriparser-$version/uriparser-$version.tar.xz"
+                    }
                 }
             ]
         },
         {
             "name": "libvorbis",
+            "//": "Performance-enhancing patches, not part of runtime libvorbis",
             "cleanup": [
                 "/share/doc/libvorbis*"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://ftp.osuosl.org/pub/xiph/releases/vorbis/libvorbis-1.3.7.tar.xz",
-                    "sha256": "b33cc4934322bcbf6efcbacf49e3ca01aadbea4114ec9589d1b1e9d20f72954b"
+                    "url": "https://downloads.xiph.org/releases/vorbis/libvorbis-1.3.7.tar.xz",
+                    "sha256": "b33cc4934322bcbf6efcbacf49e3ca01aadbea4114ec9589d1b1e9d20f72954b",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 1758,
+                        "url-template": "https://downloads.xiph.org/releases/vorbis/libvorbis-$version.tar.xz"
+                    }
                 },
                 {
                     "type": "patch",
                     "path": "patches/libvorbis-1.3.7-aotuv-b6.03.patch"
                 },
                 {
-                    "only-arches": [ "x86_64" ],
+                    "only-arches": [
+                        "x86_64"
+                    ],
                     "type": "patch",
                     "path": "patches/libvorbis-1.3.7-aotuv-b6.03-lancer.patch"
                 }
@@ -160,7 +211,12 @@
                 {
                     "type": "archive",
                     "url": "https://files.musepack.net/source/musepack_src_r475.tar.gz",
-                    "sha256": "a4b1742f997f83e1056142d556a8c20845ba764b70365ff9ccf2e3f81c427b2b"
+                    "sha256": "a4b1742f997f83e1056142d556a8c20845ba764b70365ff9ccf2e3f81c427b2b",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 21865,
+                        "url-template": "https://files.musepack.net/source/musepack_src_r$version.tar.gz"
+                    }
                 },
                 {
                     "type": "patch",
@@ -189,20 +245,39 @@
                 {
                     "type": "git",
                     "url": "https://github.com/xiph/rnnoise.git",
-                    "commit": "9acc1e5a633e0961a5895a73204df24744f199b6"
+                    "tag": "v0.2",
+                    "commit": "904a876dce1f9ab8860c0a5000ed151f9f6eef58",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^v([\\d.]+)$"
+                    }
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/rnnoise-fix-arm64-build.patch"
+                },
+                {
+                    "type": "file",
+                    "url": "https://media.xiph.org/rnnoise/models/rnnoise_data-0b50c45.tar.gz",
+                    "sha256": "4ac81c5c0884ec4bd5907026aaae16209b7b76cd9d7f71af582094a2f98f4b43",
+                    "//": "Add manually according to download_model.sh"
                 }
             ]
         },
         {
             "name": "rubberband",
             "build-options": {
-                "env": { "Vamp_CFLAGS": " ", "Vamp_LIBS": " " }
+                "env": {
+                    "Vamp_CFLAGS": " ",
+                    "Vamp_LIBS": " "
+                }
             },
             "sources": [
                 {
                     "type": "archive",
                     "url": "https://breakfastquay.com/files/releases/rubberband-1.8.2.tar.bz2",
-                    "sha256": "86bed06b7115b64441d32ae53634fcc0539a50b9b648ef87443f936782f6c3ca"
+                    "sha256": "86bed06b7115b64441d32ae53634fcc0539a50b9b648ef87443f936782f6c3ca",
+                    "//": "Stay at v1.8.2 because of switched flags in versions >= 1.9"
                 },
                 {
                     "type": "shell",
@@ -220,31 +295,51 @@
         {
             "name": "smooth",
             "no-autogen": true,
-            "make-install-args": [ "prefix=/app" ],
+            "make-install-args": [
+                "prefix=/app"
+            ],
             "sources": [
                 {
                     "type": "archive",
                     "url": "https://github.com/enzo1982/smooth/releases/download/v0.9.10/smooth-0.9.10.tar.gz",
-                    "sha256": "c018ea09eb4e269268cb123bb5d24a813d07c985384c5384d7fa73b7173e9f1c"
+                    "sha256": "c018ea09eb4e269268cb123bb5d24a813d07c985384c5384d7fa73b7173e9f1c",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 84187,
+                        "url-template": "https://github.com/enzo1982/smooth/releases/download/v$version/smooth-$version.tar.gz"
+                    }
                 }
             ]
         },
         {
             "name": "BoCA",
             "no-autogen": true,
-            "make-install-args": [ "prefix=/app" ],
+            "make-install-args": [
+                "prefix=/app"
+            ],
             "sources": [
                 {
                     "type": "archive",
                     "url": "https://github.com/enzo1982/BoCA/releases/download/v1.0.7/boca-1.0.7.tar.gz",
-                    "sha256": "2433f2752e1441f6270460f5f2acb99de67b269e494559134e3ab26173222c7e"
+                    "sha256": "2433f2752e1441f6270460f5f2acb99de67b269e494559134e3ab26173222c7e",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 371335,
+                        "url-template": "https://github.com/enzo1982/BoCA/releases/download/v$version/boca-$version.tar.gz"
+                    }
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/boca-1.0.7-mac.patch"
                 }
             ]
         },
         {
             "name": "freac",
             "no-autogen": true,
-            "make-install-args": [ "prefix=/app" ],
+            "make-install-args": [
+                "prefix=/app"
+            ],
             "build-options": {
                 "cxxflags": "-DFREAC_DATE=\\\"20230305\\\""
             },
@@ -252,11 +347,20 @@
                 {
                     "type": "archive",
                     "url": "https://github.com/enzo1982/freac/releases/download/v1.1.7/freac-1.1.7.tar.gz",
-                    "sha256": "617d51759315f65e387fcaf1f1b455c97a2fb53bfdbd2521c9c586b3271f3528"
+                    "sha256": "617d51759315f65e387fcaf1f1b455c97a2fb53bfdbd2521c9c586b3271f3528",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 371355,
+                        "url-template": "https://github.com/enzo1982/freac/releases/download/v$version/freac-$version.tar.gz"
+                    }
                 },
                 {
                     "type": "patch",
                     "path": "patches/freac-1.1-beta-noudev.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/freac-1.1.7-playback-fix.patch"
                 },
                 {
                     "type": "patch",

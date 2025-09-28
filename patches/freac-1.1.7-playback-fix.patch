@@ -1,0 +1,70 @@
+diff -Naur freac-1.1.7/include/player.h freac-1.1.7-playback-fix/include/player.h
+--- freac-1.1.7/include/player.h	2020-10-17 14:54:15.000000000 +0200
++++ freac-1.1.7-playback-fix/include/player.h	2025-09-27 17:52:58.355300900 +0200
+@@ -40,7 +40,7 @@
+ 			Int					 PlayThread();
+ 
+ 			Void					 Loop(Decoder *, Processor *);
+-			Void					 Write(Buffer<UnsignedByte> &, Int);
++			Void					 Write(Buffer<UnsignedByte> &);
+ 		public:
+ 								 Player();
+ 								~Player();
+diff -Naur freac-1.1.7/src/player.cpp freac-1.1.7-playback-fix/src/player.cpp
+--- freac-1.1.7/src/player.cpp	2021-05-25 17:45:53.000000000 +0200
++++ freac-1.1.7-playback-fix/src/player.cpp	2025-09-27 17:53:02.318966000 +0200
+@@ -188,22 +188,11 @@
+ 	const Format		&format		= track.GetFormat();
+ 
+ 	Int64			 position	= 0;
+-	UnsignedLong		 samplesSize	= format.rate / 4;
++	UnsignedLong		 samplesSize	= format.rate / 8;
+ 
+ 	Int			 bytesPerSample = format.bits / 8 * format.channels;
+ 	Buffer<UnsignedByte>	 buffer(samplesSize * bytesPerSample);
+ 
+-	/* Calculate output chunk size.
+-	 */
+-	Int			 chunkSize	= samplesSize * bytesPerSample;
+-
+-	if (processor != NIL)
+-	{
+-		const Format	&format = processor->GetFormatInfo();
+-
+-		chunkSize = format.rate * format.channels * (format.bits / 8) / 4;
+-	}
+-
+ 	/* Enter playback loop.
+ 	 */
+ 	while (!stop)
+@@ -252,7 +241,7 @@
+ 		else if (track.approxLength >= 0) onProgress.Emit(i18n->IsActiveLanguageRightToLeft() ? 1000 - 1000.0 / track.approxLength  * position : 1000.0 / track.approxLength  * position);
+ 		else				  onProgress.Emit(i18n->IsActiveLanguageRightToLeft() ? 1000 - 1000.0 / (240 * format.rate) * position : 1000.0 / (240 * format.rate) * position);
+ 
+-		Write(buffer, chunkSize);
++		Write(buffer);
+  	}
+ 
+ 	/* Finish sample transformations.
+@@ -263,18 +252,18 @@
+ 
+ 	/* Pass remaining samples to output.
+ 	 */
+-	Write(buffer, samplesSize * bytesPerSample);
++	Write(buffer);
+ 
+ 	if (!stop) output->Finish();
+ 
+ 	while (!stop && output->IsPlaying()) S::System::System::Sleep(20);
+ }
+ 
+-Void freac::Player::Write(Buffer<UnsignedByte> &buffer, Int chunkSize)
++Void freac::Player::Write(Buffer<UnsignedByte> &buffer)
+ {
+ 	while (buffer.Size() > 0)
+ 	{
+-		while (!stop && (paused || output->CanWrite() < chunkSize)) S::System::System::Sleep(10);
++		while (!stop && (paused || output->CanWrite() == 0)) S::System::System::Sleep(10);
+ 
+ 		if (stop) break;
+ 
