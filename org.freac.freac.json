@@ -105,8 +105,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://sourceforge.net/projects/lame/files/lame/3.100/lame-3.100.tar.gz",
-                    "sha256": "ddfe36cab873794038ae2c1210557ad34857a4b6bdc515785d1da9e175b1da1e",
+                    "url": "https://sourceforge.net/projects/lame/files/lame/3.101/lame-3.101.tar.gz",
+                    "sha256": "7578af6eebd578b2bd64e468fac4ae1f03670a7e028166e67f855674b9b6aeac",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 12523,
@@ -154,8 +154,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/uriparser/uriparser/releases/download/uriparser-1.0.1/uriparser-1.0.1.tar.xz",
-                    "sha256": "acd18cfb14d1851705f863f7a625be693fb3971fb85d4996faa21147f0315fcb",
+                    "url": "https://github.com/uriparser/uriparser/releases/download/uriparser-1.0.2/uriparser-1.0.2.tar.xz",
+                    "sha256": "7b2496f9622b4b201186a3d159d278605f1fb7262402a10cc1c0824889798b00",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10160,
