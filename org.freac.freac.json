@@ -118,7 +118,7 @@
                         "x86_64"
                     ],
                     "type": "patch",
-                    "path": "patches/lame-3.100-sse-20171014.patch",
+                    "path": "patches/lame-4.0-sse-20260715.patch",
                     "strip-components": 0
                 }
             ]
